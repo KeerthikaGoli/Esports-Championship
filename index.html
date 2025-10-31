@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports Championship 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Gaming Background -->
+    <div class="gaming-bg">
+        <div class="gaming-grid"></div>
+        <div class="floating-particles" id="particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo orbitron">ESports 2025</div>
+            
+            <ul class="navbar-menu">
+                <li><a href="#home" class="navbar-link active">Home</a></li>
+                <li><a href="#highlights" class="navbar-link">Highlights</a></li>
+                <li><a href="#tournament" class="navbar-link">Tournament</a></li>
+                <li><a href="#teams" class="navbar-link">Teams</a></li>
+                <li><a href="#schedule" class="navbar-link">Schedule</a></li>
+            </ul>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">🌙</button>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-menu-item">Home</a>
+            <a href="#highlights" class="mobile-menu-item">Highlights</a>
+            <a href="#tournament" class="mobile-menu-item">Tournament</a>
+            <a href="#teams" class="mobile-menu-item">Teams</a>
+            <a href="#schedule" class="mobile-menu-item">Schedule</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section min-h-screen flex items-center justify-center">
+        <div class="hero-content fade-in">
+            <h1 class="hero-title pulse">
+                ESPORTS 2025
+            </h1>
+            <p class="hero-subtitle fade-in">
+                The Ultimate Gaming Championship Experience - Where Legends Are Born
+            </p>
+            <div class="countdown-section fade-in">
+                <div class="countdown-label">Next Match Starts In:</div>
+                <div id="countdown" class="countdown-timer">
+                    00:00:00:00
+                </div>
+            </div>
+            <button id="registerBtn" class="btn-secondary fade-in">
+                Register Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Championship Highlights -->
+    <section id="highlights" class="section">
+        <div class="container">
+            <h2 class="section-heading fade-in">
+                Championship Highlights
+            </h2>
+            <div class="slider-container fade-in">
+                <div class="slider-wrapper" id="slider">
+                    <div class="slide">
+                        <h3>Epic Battles Await</h3>
+                        <p>Experience the most intense gaming competition with world-class players battling for ultimate supremacy in the digital arena.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>World-Class Teams</h3>
+                        <p>Watch the best esports teams from around the globe compete in spectacular matches filled with strategy and skill.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Live Streaming</h3>
+                        <p>Follow every moment with ultra-high-quality live streaming across multiple platforms with expert commentary.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Record Prize Pool</h3>
+                        <p>Compete for the largest prize pool in esports history - over $2 million in prizes and sponsorship opportunities.</p>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <div class="nav-dot active" data-slide="0"></div>
+                    <div class="nav-dot" data-slide="1"></div>
+                    <div class="nav-dot" data-slide="2"></div>
+                    <div class="nav-dot" data-slide="3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Brackets -->
+    <section id="tournament" class="section">
+        <div class="container">
+            <h2 class="section-heading fade-in">
+                Tournament Brackets
+            </h2>
+            <div class="bracket-grid fade-in">
+                <div class="bracket-round">
+                    <h3 class="round-title">Quarterfinals</h3>
+                    <div id="quarterfinals"></div>
+                </div>
+                <div class="bracket-round">
+                    <h3 class="round-title">Semifinals</h3>
+                    <div id="semifinals"></div>
+                </div>
+                <div class="bracket-round">
+                    <h3 class="round-title">Finals</h3>
+                    <div id="finals"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Teams -->
+    <section id="teams" class="section">
+        <div class="container">
+            <h2 class="section-heading fade-in">
+                Featured Teams
+            </h2>
+            <div class="team-grid fade-in">
+                <div class="team-card glass-card">
+                    <div class="team-logo">⚡</div>
+                    <h3 class="orbitron text-xl font-bold mb-2 text-cyan-400">Thunder Bolts</h3>
+                    <p class="text-gray-400 mb-4">World Champions 2024</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Wins:</span>
+                            <span class="text-cyan-400 font-bold">247</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rank:</span>
+                            <span class="text-cyan-400 font-bold">#1</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rating:</span>
+                            <span class="text-cyan-400 font-bold">2850</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card glass-card">
+                    <div class="team-logo">🔥</div>
+                    <h3 class="orbitron text-xl font-bold mb-2 text-pink-400">Phoenix Squad</h3>
+                    <p class="text-gray-400 mb-4">Rising Champions</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Wins:</span>
+                            <span class="text-pink-400 font-bold">198</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rank:</span>
+                            <span class="text-pink-400 font-bold">#3</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rating:</span>
+                            <span class="text-pink-400 font-bold">2720</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card glass-card">
+                    <div class="team-logo">🌟</div>
+                    <h3 class="orbitron text-xl font-bold mb-2 text-green-400">Cyber Legends</h3>
+                    <p class="text-gray-400 mb-4">Veteran Powerhouse</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Wins:</span>
+                            <span class="text-green-400 font-bold">312</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rank:</span>
+                            <span class="text-green-400 font-bold">#2</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rating:</span>
+                            <span class="text-green-400 font-bold">2790</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Schedule -->
+    <section id="schedule" class="section">
+        <div class="container">
+            <h2 class="section-heading fade-in">
+                Tournament Schedule
+            </h2>
+            <div class="schedule-tabs fade-in">
+                <button class="tab-btn active" data-tab="qualifiers">Qualifiers</button>
+                <button class="tab-btn" data-tab="semis">Semi-Finals</button>
+                <button class="tab-btn" data-tab="finals">Finals</button>
+            </div>
+            <div class="schedule-content fade-in" id="scheduleContent">
+                <!-- Content populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;" id="modalClose">&times;</button>
+            <h2 class="orbitron text-3xl font-bold text-center mb-8" style="color: var(--primary-neon); text-shadow: 0 0 20px var(--primary-neon);">Team Registration</h2>
+            
+            <form id="registrationForm">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div class="form-group">
+                        <label class="form-label">Team Name *</label>
+                        <input type="text" name="teamName" class="form-input" placeholder="Enter your team name" required>
+                        <div style="color: #ff4757; font-size: 0.875rem; margin-top: 0.5rem; display: none;" id="teamNameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Team Leader *</label>
+                        <input type="text" name="teamLeader" class="form-input" placeholder="Enter team leader name" required>
+                        <div style="color: #ff4757; font-size: 0.875rem; margin-top: 0.5rem; display: none;" id="teamLeaderError"></div>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div class="form-group">
+                        <label class="form-label">Email Address *</label>
+                        <input type="email" name="email" class="form-input" placeholder="team@example.com" required>
+                        <div style="color: #ff4757; font-size: 0.875rem; margin-top: 0.5rem; display: none;" id="emailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                        <div style="color: #ff4757; font-size: 0.875rem; margin-top: 0.5rem; display: none;" id="phoneError"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Team Members (Maximum 5 players)</label>
+                    <textarea name="teamMembers" rows="4" class="form-input" style="resize: vertical; min-height: 120px;" placeholder="Enter team member names, one per line"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    Register Team
+                </button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <button class="success-close-btn" id="successCloseBtn">&times;</button>
+                <div style="font-size: 4rem; margin-bottom: 1.5rem;">🎉</div>
+                <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: var(--accent-neon); text-shadow: 0 0 15px var(--accent-neon);">Successfully Registered!</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">Your team has been successfully registered for Esports Championship 2025. You will receive a confirmation email shortly with tournament details.</p>
+                <div style="background: rgba(57, 255, 20, 0.1); border: 1px solid var(--accent-neon); border-radius: 0.5rem; padding: 1rem; font-size: 0.9rem;">
+                    <strong>What's Next?</strong><br>
+                    • Check your email for confirmation<br>
+                    • Join our Discord for updates<br>
+                    • Prepare for the competition!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="orbitron text-2xl font-bold mb-4" style="color: var(--primary-neon); text-shadow: 0 0 20px var(--primary-neon);">
+                ESports Championship 2025
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">
+                The Ultimate Gaming Experience - Where Champions Rise
+            </p>
+            
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <a href="#" style="color: var(--text-primary); text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.color='var(--primary-neon)'" onmouseout="this.style.color='var(--text-primary)'">Discord</a>
+                <a href="#" style="color: var(--text-primary); text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.color='var(--primary-neon)'" onmouseout="this.style.color='var(--text-primary)'">Twitter</a>
+                <a href="#" style="color: var(--text-primary); text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.color='var(--primary-neon)'" onmouseout="this.style.color='var(--text-primary)'">Instagram</a>
+                <a href="#" style="color: var(--text-primary); text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.color='var(--primary-neon)'" onmouseout="this.style.color='var(--text-primary)'">YouTube</a>
+            </div>
+            
+            <div style="color: var(--text-secondary); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--glass-border);">
+                © 2025 ESports Championship. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
