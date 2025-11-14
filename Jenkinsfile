@@ -11,14 +11,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building the Esports Championship project..."
-                sh 'echo Build step running'
+                bat 'echo Build step running'
             }
         }
 
         stage('Test') {
             steps {
                 echo "Running tests for Esports Championship..."
-                sh 'echo Test step running'
+                bat 'echo Test step running'
             }
         }
     }
